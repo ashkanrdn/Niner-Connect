@@ -1,0 +1,58 @@
+/* Connections */
+
+.body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.activityholder {
+    margin: auto;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.activity {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(148, 148, 148, 0.575);
+    box-shadow: rgba(190, 190, 190, 0.76) -1px -3px 10px;
+    width: 40%;
+}
+
+.imagestiles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.activity figure {
+    margin: auto;
+    text-align: center;
+}
+
+.activity figcaption {
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    text-decoration: underline;
+}
+
+.activity figcaption a {
+    text-decoration: underline;
+    color: white;
+}
+
+.activity-fig-img {
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: gray 0px 0px 10px;
+    height: 100px;
+    width: 80%;
+    object-fit: cover;
+}

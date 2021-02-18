@@ -1,0 +1,41 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <!-- ```````````````````````HEADER```````````````````````  -->
+        <%- include('../partials/header.ejs') %>
+            <%- include('../partials/messages.ejs') %>
+
+                <!-- ```````````````````````BODY```````````````````````  -->
+                <section class="body">
+                    <section class="activityholder">
+                        <% if (conListHandler.length > 0) { %>
+                            <% let unique = [...new Set(conListHandler.map(connection => connection.conTopic))] %>
+                                <% unique.forEach(category => { %>
+                                    <div class="activity">
+                                        <h1>
+                                            <%= category %>
+                                        </h1>
+                                        <% conListHandler.forEach( event => { %>
+                                            <% if (event.conTopic === category){ %>
+                                                <figure>
+                                                    <img class="activity-fig-img" src="<%= event.conImgURL  %>" alt="<%= event.conTitle %> image">
+                                                    <figcaption>
+                                                        <a href="/connections/connection/<%= event._id %>">
+                                                            <%= event.conTitle %>
+                                                        </a>
+                                                    </figcaption>
+                                                </figure>
+                                                <% } %>
+                                                    <% }) %>
+                                    </div>
+                                    <% }) %>
+                                        <% } else { %>
+                                            <h1>There are no events...</h1>
+                                            <% } %>
+                    </section>
+                </section>
+                <!-- ```````````````````````Footer```````````````````````  -->
+                <%- include('../partials/footer.ejs')  %>
+    </body>
+
+    </html>

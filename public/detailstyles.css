@@ -1,0 +1,94 @@
+    /* Connections */
+    
+    .body {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .detailHolder {
+        margin: auto;
+        padding-top: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .activitydetail {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    .instructions {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .detailHolder ul {
+        list-style-type: none;
+        display: inline;
+    }
+    
+    .instructions img {
+        margin-top: 20px;
+        border-radius: 5px;
+        box-shadow: gray 0px 0px 10px;
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+    }
+    
+    .buttons {
+        padding: 0px;
+    }
+    
+    .buttons button {
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border: none;
+        box-shadow: gray 0px 0px 1px;
+        padding: 8px 16px;
+        margin-right: 5px;
+        border-radius: 5px;
+        transition-duration: 0.1s;
+    }
+    
+    button:hover {
+        border: white solid 1px;
+        box-shadow: gray 0px 0px 10px;
+        /* Green */
+    }
+    
+    .buttons a {
+        text-decoration: none;
+        color: white;
+        border: none;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    
+    .buttons li {
+        list-style-type: none;
+        display: inline;
+        font: 18px Arial;
+        text-decoration: none;
+        color: #333333;
+        padding: 18px;
+    }
+    
+    .yes {
+        background-color: #4CAF50;
+    }
+    
+    .no {
+        background-color: #f44336;
+    }
+    
+    .maybe {
+        background-color: rgb(53, 164, 255);
+    }

@@ -1,0 +1,24 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <!-- ```````````````````````HEADER```````````````````````  -->
+        <%- include('../partials/header.ejs') %>
+            <%- include('../partials/messages.ejs') %>
+
+                <!-- ```````````````````````BODY```````````````````````  -->
+
+                <div class='formParent'>
+                    <form action="/users/Login" method="POST">
+                        <label for="email">user Name:</label><br>
+                        <input type="text" id="email" name="email"><br>
+                        <label for="password">Password:</label><br>
+                        <input type="password" id="password" name="password"><br><br>
+                        <input type="submit" value="Login">
+                    </form>
+                </div>
+
+                <!-- ```````````````````````FOOTER```````````````````````  -->
+                <%- include('../partials/footer.ejs')  %>
+    </body>
+
+    </html>

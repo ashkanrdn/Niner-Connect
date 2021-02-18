@@ -1,0 +1,116 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <!-- ```````````````````````HEADER```````````````````````  -->
+        <%- include('../partials/header.ejs') %>
+            <%- include('../partials/messages.ejs') %>
+
+                <!-- ```````````````````````BODY```````````````````````  -->
+                <section class="body">
+                    <% if (data !== null){ %>
+
+
+                        <h1 class="SavedConnectionsTitle">
+                            <%= user.name%>'s connections
+                        </h1>
+                        <section class="detailHolder">
+
+                            <table class="tables">
+                                <tr>
+                                    <th> Event Name </th>
+                                    <th> Event Category </th>
+                                    <th> Actions </th>
+                                </tr>
+
+                                <% data.forEach(event=>{ %>
+
+
+                                    <tr>
+                                        <td>
+                                            <a class='savedEvent' href="/connections/connection/<%=event._id%>">
+                                                <%=event.conTitle  %>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <%= event.conTopic %>
+                                        </td>
+                                        <td>
+                                            <form class="specialForm">
+                                                <ul class="buttons">
+
+
+
+
+                                                    <li> <button class="maybe" type="submit" formmethod="GET" formaction="/connections/connection/<%= event._id%>/update">Edit</button> </li>
+
+
+
+                                                    <li> <button class="no" type="submit" formmethod="POST" formaction="/connections/connection/<%= event._id%>?_method=DELETE">Delete</button> </li>
+
+
+
+                                                </ul>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <% }) ;%>
+                            </table>
+                        </section>
+                        <% } %>
+                            <section class="detailHolder">
+                                <table class="tables">
+                                    <tr>
+                                        <th>Connections</th>
+                                        <th>Category</th>
+                                        <th>Going?</th>
+                                        <th>Settings</th>
+
+                                    </tr>
+
+                                    <% if (rsvpData !== null){ %>
+                                        <% rsvpData.forEach(event=>{ %>
+
+                                            <tr>
+                                                <td>
+                                                    <a class='savedEvent' href="/connections/connection/<%=event.event._id%>">
+                                                        <%=event.event.conTitle  %>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <%= event.event.conTopic %>
+                                                </td>
+                                                <td>
+                                                    <button class="<%= event.going %>" type="submit" formmethod="GET" formaction="/connections/connection/<%= event.event._id%>"><%= event.going %> </button>
+                                                </td>
+
+                                                <td>
+                                                    <form class='specialForm'>
+
+
+                                                        <button class='no' type="submit" formmethod="POST" formaction="/connections/connection/<%= event.event._id%>/rsvp" name="rsvp" value="No">Delete</button>
+                                                        <button class='maybe' type="submit" formmethod="GET" formaction="/connections/connection/<%= event.event._id%>">Update</button>
+
+
+
+                                                    </form>
+                                                </td>
+
+                                            </tr>
+
+
+                                            <% }) %>
+
+
+                                                <%}else{%>
+                                                    <h1>You have not responded to any events yet!</h1>
+                                                    <% } %>
+
+
+                                </table>
+                            </section>
+                </section>
+                <!-- ```````````````````````FOOTER```````````````````````  -->
+                <%- include('../partials/footer.ejs')  %>
+    </body>
+
+    </html>

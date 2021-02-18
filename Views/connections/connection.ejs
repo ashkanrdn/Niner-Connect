@@ -1,0 +1,97 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <!-- ```````````````````````HEADER```````````````````````  -->
+        <%- include('../partials/header.ejs') %>
+            <%- include('../partials/messages.ejs') %>
+
+                <!-- ```````````````````````BODY```````````````````````  -->
+                <section class="body">
+                    <section class="detailHolder">
+                        <div class="activitydetail">
+                            <h1>
+                                <%=eventhandle.conTitle  %>
+                            </h1>
+                            <div class="instructions ">
+                                <figure>
+                                    <img class="fig-img" src="<%= eventhandle.conImgURL  %>" alt="<%= eventhandle.conTitle %>">
+                                </figure>
+                                <ul>
+                                    <li>Host :
+                                        <%= eventhandle.conHost  %>
+                                    </li>
+                                    <li>Date :
+                                        <%= eventhandle.conDate  %>
+                                    </li>
+                                    <li> Start:
+                                        <%= eventhandle.conStart  %>
+                                    </li>
+                                    <li>End:
+                                        <%= eventhandle.conEnd  %>
+                                    </li>
+                                    <li>Location :
+                                        <%= eventhandle.conLocation  %>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time">
+                                <h1>Details:</h1>
+                                <p>
+                                    <%=  eventhandle.conDetails  %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="attending">
+                            <% if( user !==null && eventhandle !== null && eventhandle.user._id  == user.id ) {%>
+
+
+
+
+                                <form>
+                                    <ul class="buttons">
+                                        <li>
+                                            <button class="maybe" type="submit" formmethod="GET" formaction="/connections/connection/<%= eventhandle._id%>/update">Edit</button>
+
+                                        </li>
+                                        <li>
+                                            <button class="no" type="submit" formmethod="POST" formaction="/connections/connection/<%= eventhandle._id%>?_method=DELETE">Delete</button>
+
+                                        </li>
+
+                                    </ul>
+
+
+                                </form>
+                                <%}else{%>
+                                    <h1>ARE YOU GOING?<br>
+                                        <%=len %> are going
+                                    </h1>
+                                    <form method="POST" action="/connections/connection/<%= eventhandle._id%>/rsvp">
+                                        <ul class="buttons">
+                                            <li>
+
+                                                <button class="yes" type="submit" name="rsvp" value="Yes">YES</button>
+
+                                            </li>
+                                            <li>
+                                                <button class="no" type="submit" name="rsvp" value="No">No</button>
+
+
+                                            </li>
+                                            <li>
+                                                <button class="maybe" type="submit" name="rsvp" value="Maybe">Maybe</button>
+
+
+
+                                            </li>
+                                        </ul>
+                                    </form>
+                                    <% } %>
+                        </div>
+                    </section>
+                </section>
+                <!-- ```````````````````````FOOTER```````````````````````  -->
+                <%- include('../partials/footer.ejs')  %>
+    </body>
+
+    </html>

@@ -1,0 +1,700 @@
+/* global */
+
+body {
+    background: rgb(135, 135, 136);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-image: url('/public/img/BG.png');
+    background-blend-mode: soft-light;
+}
+
+
+/* Header */
+
+#navigation-container {
+    box-sizing: border-box;
+    width: auto;
+    margin: auto;
+    height: 100px;
+}
+
+.navigation-bar {
+    background-image: url("/public/img/headerpic.png");
+    background-size: 100%;
+    background-position: bottom;
+    height: 100%;
+    width: 100%;
+}
+
+.navigation-bar img {
+    float: left;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+
+/* Header */
+
+
+/* Menu */
+
+.navigation-bar ul {
+    padding: 0px;
+    padding-top: 20px;
+    margin: 0px;
+    vertical-align: top;
+    text-align: right;
+}
+
+.navigation-bar li {
+    list-style-type: none;
+    padding: 3px;
+    background-color: rgba(255, 255, 255, 0.472);
+    border-radius: 3px;
+    display: inline;
+    margin-right: 5px;
+}
+
+.navigation-bar li a {
+    color: white;
+    font-size: 16px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    line-height: 100px;
+    padding: 5px 15px;
+}
+
+.site-name-holder {
+    height: 20px;
+    position: relative;
+    top: -50px;
+    margin: auto;
+    text-align: center;
+    width: 20%;
+}
+
+.site-name {
+    margin: 0px;
+}
+
+
+/* Header */
+
+
+/* Page Name */
+
+.page-name {
+    margin-left: 0px;
+    height: 60px;
+    position: relative;
+    top: -10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-name ul {
+    padding: 0px;
+}
+
+.page-name li {
+    padding: 5px;
+    text-align: center;
+    font: bold;
+    background-color: rgba(110, 110, 110, 0.521)
+}
+
+.page-name h1 {
+    margin-left: 20px;
+}
+
+
+/* FOOTER */
+
+.footer-distributed {
+    background-color: rgba(0, 47, 255, 0.507);
+    position: fixed;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+    color: white;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* FOOTER */
+
+
+/* LEFT */
+
+.footer-left {
+    margin-top: 10px;
+    width: 40%;
+}
+
+.footer-left h3 {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 20px;
+}
+
+.footer-left ul {
+    list-style-type: none;
+    margin: 5px;
+    text-align: left;
+    padding: 0px;
+    padding-top: 5px;
+}
+
+.footer-left li {
+    list-style-type: none;
+    display: inline;
+    border-right: solid white 1px;
+}
+
+.footer-left li a {
+    color: white;
+    /* font-size: 16px; */
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    /* line-height: 100px; */
+    padding: 5px 15px;
+}
+
+.footer-left h6 {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+
+/* FOOTER */
+
+
+/* RIGHT */
+
+.footer-right {
+    margin-top: 10px;
+    width: 200px;
+}
+
+.footer-right h3 {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 20px;
+}
+
+.footer-right ul {
+    list-style-type: none;
+    margin: 5px;
+    text-align: left;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.footer-right li {
+    list-style-type: none;
+    display: inline;
+}
+
+.footer-right li a {
+    color: white;
+    /* font-size: 16px; */
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    /* line-height: 100px; */
+    padding: 5px 15px;
+    margin-left: 15px;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* FOOTER */
+
+
+/* ICON */
+
+.instagram {
+    background-image: url("/public/img/inst.png");
+}
+
+.youtube {
+    background-image: url("/public/img/yt.png");
+}
+
+.facebook {
+    background-image: url("/public/img/fb.png");
+}
+
+
+/* Body */
+
+.body {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Body Images */
+
+
+/* index */
+
+.imagestiles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.imagestiles figure {
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}
+
+.imagestiles figcaption {
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+.fig-img {
+    margin-top: 20px;
+    border-radius: 50%;
+    box-shadow: gray 0px 0px 10px;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+
+/* Body Text */
+
+.sec2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+    /* top: 572px; */
+    /* bottom: 70px; */
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 1%;
+    height: 100%;
+}
+
+.sec2 h1 {
+    margin: 10px;
+    padding: 0px;
+}
+
+.sec2 p {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Saved connections */
+
+.body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.detailHolder {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.tables {
+    align-self: center;
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    vertical-align: center;
+}
+
+th,
+td {
+    padding: 10px;
+    background-color: #aabcfe7c;
+    ;
+}
+
+th {
+    background-color: #85a2ff;
+    color: white;
+    border-bottom: solid 2px white;
+}
+
+td {
+    border: 1px solid#666669;
+}
+
+tr button {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    box-shadow: gray 0px 0px 1px;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 5px;
+    transition-duration: 0.1s;
+}
+
+.going {
+    background-color: #4CAF50;
+}
+
+tr button:hover {
+    border: white solid 1px;
+    box-shadow: gray 0px 0px 10px;
+    /* Green */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+td a {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+
+/* Detail style */
+
+
+/* Connections */
+
+.body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.detailHolder {
+    margin: auto;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.activitydetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.detailHolder ul {
+    list-style-type: none;
+    display: inline;
+}
+
+.instructions img {
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: gray 0px 0px 10px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.buttons {
+    padding: 0px;
+}
+
+.buttons button {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    box-shadow: gray 0px 0px 1px;
+    padding: 8px 16px;
+    margin-right: 5px;
+    border-radius: 5px;
+    transition-duration: 0.1s;
+}
+
+button:hover {
+    border: white solid 1px;
+    box-shadow: gray 0px 0px 10px;
+    /* Green */
+}
+
+.buttons a {
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.buttons li {
+    list-style-type: none;
+    display: inline;
+    font: 18px Arial;
+    text-decoration: none;
+    color: #333333;
+    padding: 18px;
+}
+
+.yes {
+    background-color: #4CAF50;
+}
+
+.no {
+    background-color: #f44336;
+}
+
+.maybe {
+    background-color: rgb(53, 164, 255);
+}
+
+
+/* connection styles */
+
+
+/* Connections */
+
+.body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.activityholder {
+    margin: auto;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.activity {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(148, 148, 148, 0.575);
+    box-shadow: rgba(190, 190, 190, 0.76) -1px -3px 10px;
+    width: 40%;
+}
+
+.imagestiles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.activity figure {
+    margin: auto;
+    text-align: center;
+}
+
+.activity figcaption {
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    text-decoration: underline;
+}
+
+.activity figcaption a {
+    text-decoration: underline;
+    color: white;
+}
+
+.activity-fig-img {
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: gray 0px 0px 10px;
+    height: 150px;
+    width: 80%;
+    object-fit: cover;
+}
+
+.aboutPage {
+    width: 500px;
+    margin-top: 200px;
+    margin: auto;
+}
+
+.contactPage {
+    width: 500px;
+    margin-top: 200px;
+    margin: auto;
+}
+
+.contactPage p {
+    font-size: larger;
+}
+
+
+/* From styling */
+
+input,
+select,
+textarea {
+    width: 50%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=submit] {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+}
+
+form {
+    /* Using CSS Grid to lay out the elements in two-dimensions: */
+    display: grid;
+    /* specifying a 0.5em gutter/gap between adjacent elements: */
+    gap: 0.1em;
+    /* declaring a number of named grid areas in order to lay out
+       the child elements; the areas identified with a period (.)
+       are 'empty' areas, whereas the areas named by strings are
+       used, later, to place elements according to those names: */
+    /* declaring the size of each of the three columns; 1fr is
+       one fractional unit of the available space, and is the
+       size of the first and last of the columns. The central
+       column is declared as being 0.5em in width: */
+    grid-template-columns: 1fr 0.5em 1fr 0.5fr;
+    margin-top: 25px;
+    width: 60%;
+}
+
+label {
+    /* placing all <label> elements in the grid column 1 (the first): */
+    grid-column: 1;
+    /* aligning text-content to the right in order to position the label
+       text near to the relevant <input>: */
+    text-align: right;
+}
+
+input,
+textarea {
+    grid-column: 3;
+}
+
+button {
+    /* positioning the <button> element in the grid-area identified
+       by the name of 'submit': */
+    grid-area: submit;
+}
+
+.welcomeNote {
+    margin-right: 50px;
+}
+
+.SavedConnectionsTitle {
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+form li button {
+    margin-top: 5px;
+}
+
+.specialForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+}
+
+.specialForm li button {
+    margin-top: 5px;
+}
+
+.savedEvent {
+    text-decoration: none;
+    color: white;
+    border: none;
+    background-color: rgba(100, 100, 100, 0);
+    border-radius: 5px;
+    font-size: large;
+}
+
+.success {
+    background: rgba(108, 192, 112, 0.7);
+    color: #fff;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.error {
+    background: rgba(255, 102, 51, 0.7);
+    color: #fff;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.specialForm {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+
+}

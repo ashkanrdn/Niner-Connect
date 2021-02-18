@@ -1,0 +1,44 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <!-- ```````````````````````HEADER```````````````````````  -->
+        <%- include('../partials/header.ejs') %>
+            <%- include('../partials/messages.ejs') %>
+
+                <!-- ```````````````````````BODY```````````````````````  -->
+                <form action="/connections/connection/<%=eventhandle._id%>?_method=PUT" method="POST">
+                    <!-- Topic -->
+                    <label for="conTopic">Event Topic:</label>
+                    <input type="text" id="conTopic" name="conTopic" value="<%= eventhandle.conTopic%>" required><br>
+                    <!-- Title -->
+                    <label for="conTitle">Event title:</label>
+                    <input type="text" id="conTitle" name="conTitle" value="<%= eventhandle.conTitle%>" required><br>
+                    <!-- Host -->
+                    <label for="conHost">Event Host:</label>
+                    <input type="text" id="conHost" name="conHost" value="<%= eventhandle.conHost%>" required><br>
+                    <!-- Detail -->
+                    <label for="conDetails">Event Details:</label>
+                    <textarea type="text" id="conDetails" name="conDetails" value="<%= eventhandle.conDetails%>" required> <%= eventhandle.conDetails%></textarea><br>
+                    <!-- Location -->
+                    <label for="conLocation">Event Location:</label>
+                    <input type="text" id="conLocation" name="conLocation" value="<%= eventhandle.conLocation%>" required><br>
+                    <!-- Date -->
+                    <label for="conDate">Event Date:</label>
+                    <input type="date" id="conDate" name="conDate" value="<%= eventhandle.conDate%>" required><br>
+                    <!-- Start -->
+                    <label for="conStart">Event Start:</label>
+                    <input type="time" id="conStart" name="conStart" value="<%= eventhandle.conStart%>" required><br>
+                    <!-- End -->
+                    <label for="conEnd">Event End:</label>
+                    <input type="time" id="conEnd" name="conEnd" value="<%= eventhandle.conEnd%>" required><br>
+                    <!-- Image -->
+                    <label for="conImgURL">Image:</label>
+                    <input type="text" id="conImgURL" name="conImgURL" value="<%= eventhandle.conImgURL%>"> <br>
+                    <!-- Submit -->
+                    <input type="submit" value="Submit">
+                </form>
+                <!-- ```````````````````````FOOTER```````````````````````  -->
+                <%- include('../partials/footer.ejs')  %>
+    </body>
+
+    </html>
