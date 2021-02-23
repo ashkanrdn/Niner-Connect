@@ -1,4 +1,4 @@
-# Niner Design Week Cnnect
+# Niner Design Week Connect
 
 
 A website for events held during niner design week
