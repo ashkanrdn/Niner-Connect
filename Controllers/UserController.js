@@ -7,16 +7,12 @@ const validationResult = require('express-validator').validationResult;
 
 
 
-
-
 exports.getUserCreate = (req, res, next) => {
     res.render('./users/signup', { title: 'SignUP' });
 }
 
 
-
 exports.postUserCreate = (req, res, next) => {
-
     const errors = validationResult(req);
     console.log(req.body)
     console.log(errors.array());
@@ -24,11 +20,8 @@ exports.postUserCreate = (req, res, next) => {
         errors.array().forEach((error) => {
             req.flash('error', error.msg);
         });
-
         res.redirect('/users/signup')
     } else {
-
-
         let user = new User({
             firstName: req.body.firstName,
             lastName: req.body.lastName,
@@ -38,7 +31,6 @@ exports.postUserCreate = (req, res, next) => {
         user.save()
             .then(result => {
                 req.flash('success', 'Successfully signedup')
-
                 res.redirect('/');
             })
             .catch(err => {
@@ -60,7 +52,6 @@ exports.postUserLogin = (req, res, next) => {
         errors.array().forEach((error) => {
             req.flash('error', error.msg);
         });
-
         res.redirect('/users/login')
     } else {
         let email = req.body.email;
@@ -73,25 +64,18 @@ exports.postUserLogin = (req, res, next) => {
                             if (isMatch) {
                                 req.session.user = { id: user._id, name: user.firstName };
                                 req.flash('success', 'Successfully logged in')
-
                                 res.redirect('/connections');
                             } else {
                                 //Incorrect password
-
                                 req.flash('error', 'Incorrect password!')
                                 console.log('Incorrect password!');
-
                                 res.redirect('/users/login');
                             }
-
                         })
                 } else {
                     //Incorrect email address
-
                     req.flash('error', 'Incorrect email address!')
-
                     console.log('Incorrect email address!');
-
                     res.redirect('/users/login');
                 }
             })
@@ -100,11 +84,7 @@ exports.postUserLogin = (req, res, next) => {
                 next();
             });
     }
-
 };
-
-
-
 
 
 
