@@ -30,11 +30,6 @@ router.get('/connection/:id/update', isLoggedIn, connectionController.getConnect
 
 // create rsvp
 router.post('/connection/:id/rsvp', isLoggedIn, validateRSVP, connectionController.createRsvp);
-<<<<<<< HEAD
-=======
-
-// updateRestaurant
->>>>>>> 67d6bb86b10864d6301cf8a2e07ac1437740d162
 
 // update Event
 router.put('/connection/:id', isLoggedIn, validateEvent, connectionController.updateConnection);
@@ -42,11 +37,7 @@ router.put('/connection/:id', isLoggedIn, validateEvent, connectionController.up
 
 
 
-<<<<<<< HEAD
 // delete event
-=======
-// deleteRestaurant
->>>>>>> 67d6bb86b10864d6301cf8a2e07ac1437740d162
 router.delete('/connection/:id', isLoggedIn, connectionController.deleteConnection);
 
 
